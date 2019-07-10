@@ -11,7 +11,7 @@ const nextSlide = () =>{
   setTimeout(() => {
     const active = document.querySelector('.slide.active');
     active.classList.toggle('active');
-    if (active.nextElementSibling){
+    if (active.nextElementSibling.classList.contains('slide')){
       active.nextElementSibling.classList.toggle('active');
     } else {
       slides[0].classList.toggle('active');
